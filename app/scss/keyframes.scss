@@ -1,20 +1,24 @@
 @-webkit-keyframes colorChanges {
 	from {
 		-webkit-filter: hue-rotate(0deg);
+		filter: hue-rotate(0deg);
 	}
 
 	to {
 		-webkit-filter: hue-rotate(-360deg);
+		filter: hue-rotate(0deg);
 	}
 }
 
 @keyframes colorChanges {
 	from {
 		-webkit-filter: hue-rotate(0deg);
+		filter: hue-rotate(0deg);
 	}
 
 	to {
 		-webkit-filter: hue-rotate(-360deg);
+		filter: hue-rotate(0deg);
 	}
 }
 
