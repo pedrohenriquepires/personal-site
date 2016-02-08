@@ -1,0 +1,87 @@
+@-webkit-keyframes colorChanges {
+	from {
+		-webkit-filter: hue-rotate(0deg);
+	}
+
+	to {
+		-webkit-filter: hue-rotate(-360deg);
+	}
+}
+
+@keyframes colorChanges {
+	from {
+		-webkit-filter: hue-rotate(0deg);
+	}
+
+	to {
+		-webkit-filter: hue-rotate(-360deg);
+	}
+}
+
+@-webkit-keyframes contentFadeIn {
+	from {
+		opacity: 0;
+		padding-bottom: 50px;
+	}
+
+	to {
+		opacity: 1;
+		padding-bottom: 0;
+	}
+}
+
+@keyframes contentFadeIn {
+	from {
+		opacity: 0;
+		padding-bottom: 50px;
+	}
+
+	to {
+		opacity: 1;
+		padding-bottom: 0;
+	}
+}
+
+@-webkit-keyframes hrInit {
+	from {
+		-webkit-transform: scaleX(0);
+		        transform: scaleX(0);
+	}
+
+	to {
+		-webkit-transform: scaleX(1);
+		        transform: scaleX(1);
+	}
+}
+
+@keyframes hrInit {
+	from {
+		-webkit-transform: scaleX(0);
+		        transform: scaleX(0);
+	}
+
+	to {
+		-webkit-transform: scaleX(1);
+		        transform: scaleX(1);
+	}
+}
+
+@-webkit-keyframes socialNetworkInit {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes socialNetworkInit {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
