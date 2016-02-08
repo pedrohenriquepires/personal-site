@@ -11,6 +11,8 @@ var autoprefixer = require('gulp-autoprefixer');
 
 var paths = {
 	index: "./app/index.html",
+	images: "./app/images/*.*",
+	imagesDist: "./dist/images/",	
 	appStyles: "./app/scss/app.scss",
 	appScripts: "./app/js/**/*.js",
 	appScriptsDist: "./dist/js/app.min.js",
@@ -23,6 +25,12 @@ var paths = {
 };
 
 var pipes = {};
+
+pipes.moveImages = function(done){
+	gulp.src(paths.images)
+		.pipe(gulp.dest(paths.imagesDist))
+		.on("end", done);
+}
 
 pipes.compileSass = function(done){
 	gulp.src(paths.appStyles)
@@ -91,6 +99,7 @@ gulp.task("sass", pipes.compileSass)
 	.task("compress-lib", pipes.compressLibScripts)
 	.task("minify-lib-styles", pipes.minifyLibStyles)
 	.task("copy-views", pipes.copyViews)
+	.task("move-images", pipes.moveImages)
 	.task("index-injector", ["sass", "compress-app", "compress-lib", "minify-lib-styles", "copy-views"], pipes.indexInjector);
 
 gulp.task("default", [
@@ -99,7 +108,8 @@ gulp.task("default", [
 	"compress-lib", 
 	"minify-lib-styles", 
 	"copy-views",
-	"index-injector"
+	"index-injector",
+	"move-images"
 ]);
 
 gulp.task('watch-sass', function() {
