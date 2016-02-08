@@ -44,11 +44,27 @@ a {
 hr {
 	border: none;
 	border-top: 1px solid $defaultComponentsColor;
-	width: 500px;
+	width: 40vw;
 	margin: 20px auto;
 	animation: 	colorChanges $colorChangeTime infinite linear,
 				hrInit .5s .8s forwards 1 ease-out;
 	transform: scaleX(0);
+
+	@media(max-width: 800px) {
+		width: 55vw;
+	}
+
+	@media(max-width: 550px) {
+		width: 70vw;
+	}
+
+	@media(max-width: 420px) {
+		width: 80vw;
+	}
+
+	@media(max-width: 350px) {
+		width: 90vw;
+	}
 }
 
 .social-network-icon {
