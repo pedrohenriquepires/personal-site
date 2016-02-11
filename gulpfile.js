@@ -47,7 +47,7 @@ pipes.compileSass = function(done){
 }
 
 pipes.minifyLibStyles = function(done){
-	if(paths.libStyles .length === 0)
+	if(paths.libStyles.length === 0)
 		return;
 
 	gulp.src(paths.libStyles)
@@ -88,7 +88,7 @@ pipes.indexInjector = function(){
 	var libStyles  = gulp.src(paths.libStylesDist, {read: false});
 
 	gulp.src(paths.index)
-		.pipe(inject(series(appScripts, libScripts), {ignorePath: 'dist/', addRootSlash: false}))
+		.pipe(inject(series(libScripts, appScripts), {ignorePath: 'dist/', addRootSlash: false}))
 		.pipe(inject(series(libStyles, appStyles), {ignorePath: 'dist/', addRootSlash: false}))
 		.pipe(gulp.dest("./dist/"));
 }
