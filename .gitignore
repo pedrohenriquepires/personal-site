@@ -1,3 +1,5 @@
 node_modules
 app/lib
 dist
+.DS_STORE
+**/.DS_STORE
